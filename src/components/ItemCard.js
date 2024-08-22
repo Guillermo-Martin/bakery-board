@@ -1,12 +1,12 @@
-function ItemCard() {
+function ItemCard({ itemName, itemDesc, itemPrice, itemImg, imgAlt }) {
   return (
     <div>
       <div>
-        <img src="https://picsum.photos/300" alt="random placeholder" />
+        <img src={itemImg} alt={imgAlt} />
       </div>
-      <h3>Item name goes here</h3>
-      <p>description goes here</p>
-      <p>price goes here</p>
+      <h3>{itemName}</h3>
+      <p>{itemDesc}</p>
+      <p>{itemPrice}</p>
     </div>
   );
 };
