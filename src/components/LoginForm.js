@@ -5,6 +5,7 @@ function LoginForm() {
   const [formInputs, setFormInputs] = useState({});
   
   // ---------- Functions ----------
+  // ----- Handle inputs -----
   // handling multiple inputs:  https://stackoverflow.com/questions/63710791/react-hooks-handle-multiple-inputs
   const handleInputs = (event) => {
     // get the name and value from the form inputs
@@ -17,13 +18,21 @@ function LoginForm() {
     setFormInputs(prevState => ({...prevState, [inputName]:inputValue}));
   };
 
+  // ----- Handle submit -----
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+
+    console.log(formInputs, "line 25");
+  }
+
+
   // ---------- JSX to return ----------
   return (
     <div>
       <p>Login form</p>
 
       {/* ---------- Form ---------- */}
-      <form>
+      <form onSubmit={handleOnSubmit}>
         <label>Username</label>
         <input type="text" id="username" name="username" value={formInputs.username || ""} onChange={handleInputs} />
 
