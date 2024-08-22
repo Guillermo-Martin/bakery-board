@@ -23,7 +23,7 @@ function LoginForm() {
     event.preventDefault();
 
     console.log(formInputs, "line 25");
-  }
+  };
 
 
   // ---------- JSX to return ----------
