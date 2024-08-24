@@ -4,6 +4,13 @@ const app = express();
 const port = 3001;
 
 
+
+// Body parser middleware (allows us to get data from the body of the request)
+// =============================================
+app.use(express.urlencoded({ extended: true })); // <-- parses incoming data and makes it available on "req.body"
+app.use(express.json()); // <-- allows us to submit raw JSON files
+
+
 // API routes
 // =============================================
 app.get('/', (req, res) => {
