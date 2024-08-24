@@ -3,13 +3,15 @@ const express = require("express");
 const router = express.Router();
 
 // when the API request is made, it's "/"
-router.get("/", (req, res) => {
-  res.send("in routes");
+router.get("/api", (req, res) => {
+  res.send("in api route");
+  console.log("in api route");
 });
 
-// API request for "/about"
-router.get("/about", (req, res) => {
-  res.send("you hit the /about route");
+// API request for "/auth" (for user authentication)
+router.get("/api/auth", (req, res) => {
+  res.send("you hit the /auth route");
+  console.log("you the the /auth/api route");
 });
 
 module.exports = router;

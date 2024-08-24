@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function LoginForm() {
+  
   // ---------- State ----------
   const [formInputs, setFormInputs] = useState({});
   
@@ -23,6 +24,9 @@ function LoginForm() {
     event.preventDefault();
 
     console.log(formInputs, "line 25");
+
+    // make an API request to the "/authentication" route
+    let response = fetch("/api/auth");
   };
 
 
