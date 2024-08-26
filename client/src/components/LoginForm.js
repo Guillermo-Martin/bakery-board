@@ -20,13 +20,18 @@ function LoginForm() {
   };
 
   // ----- Handle submit -----
-  const handleOnSubmit = (event) => {
+  const handleOnSubmit = async (event) => {
     event.preventDefault();
 
     console.log(formInputs, "line 25");
 
-    // make an API request to the "/authentication" route
-    let response = fetch("/api/auth");
+    // make an API request to the "/authentication" route, get a response
+    // convert the response to usable data
+    const response = await fetch("/api/auth");
+    const userData = await response.json();
+
+    // userData
+    console.log(userData, "line 34");
   };
 
 
