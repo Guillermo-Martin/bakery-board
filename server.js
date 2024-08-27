@@ -4,6 +4,24 @@ const express = require("express");
 const app = express();
 const port = 3001;
 
+
+// Mongoose setup
+// =============================================
+const mongoose = require("mongoose");
+const database = "bakeryBoard";
+
+// function to connect to database
+async function connectToDatabase() {
+  await mongoose.connect(`mongodb://127.0.0.1:27017/${database}`);
+  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+}
+
+// connect to database
+connectToDatabase()
+  .then(console.log("success!"))
+  .catch(err => console.log(err));
+
+
 // Entrance into the API routes
 // =============================================
 const routes = require("./routes");
@@ -25,6 +43,7 @@ app.use(routes);
 //   console.log(req.params);
 //   res.send(req.params);
 // });
+
 
 // Listener
 // =============================================

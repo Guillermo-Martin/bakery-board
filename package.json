@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/Guillermo-Martin/bakery-board#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.5.4"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
