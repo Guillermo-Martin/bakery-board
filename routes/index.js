@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // get functions from user controller
-const { getAllKittens } = require("./../controllers/kittenController");
+// const { getAllKittens } = require("./../controllers/kittenController");
 const { findUser } = require("./../controllers/userController");
 
 // when the API request is made, it's "/"
