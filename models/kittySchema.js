@@ -1,8 +1,9 @@
 // 1. require mongoose
 const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
 // 2. create the schema (the blueprint of how the data should look in the database)
-const kittySchema = new mongoose.Schema({
+const kittySchema = new Schema({
   name: String
 });
 
