@@ -39,3 +39,10 @@ function UserDashboardPage(){
 }
 
 export default UserDashboardPage;
+
+// ***** POSSIBLE TODOS FOR THIS PAGE / NOTES *****
+// * When the page renders, make an API request to a database to retrieve item information.
+// * When the item information is received, update some sort of state ("items")
+//     * import "useState"
+//     * create "items" state and "setItems" state setter function
+// * For every item, create an "ItemCard" component (use map function)
