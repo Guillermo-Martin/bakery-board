@@ -9,12 +9,15 @@ import PostItemPage4 from "./pages/PostItemPage4";
 import ReviewPage from "./pages/ReviewPage";
 import SuccessPage from "./pages/SuccessPage";
 import QuickAddPage from "./pages/QuickAddPage";
+import Navbar from "./components/Navbar";
 
 
 function App() {
   return (
     <div className="App">
       <LoginPage />
+
+      <Navbar />
 
     </div>
   );

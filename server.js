@@ -18,7 +18,7 @@ async function connectToDatabase() {
 
 // connect to database
 connectToDatabase()
-  .then(console.log("success!"))
+  .then(console.log("Connected to the database!"))
   .catch(err => console.log(err));
 
 
