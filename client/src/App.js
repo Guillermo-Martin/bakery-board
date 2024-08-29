@@ -10,15 +10,14 @@ import ReviewPage from "./pages/ReviewPage";
 import SuccessPage from "./pages/SuccessPage";
 import QuickAddPage from "./pages/QuickAddPage";
 import Navbar from "./components/Navbar";
+import UserDashboardPage from "./pages/UserDashboardPage";
 
 
 function App() {
   return (
     <div className="App">
-      <LoginPage />
-
-      <Navbar />
-
+      
+      <UserDashboardPage />
     </div>
   );
 }
