@@ -1,34 +1,14 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
-
-
-// ---------- Slices ----------
-// example slice
-const counterSlice = createSlice({
-  name: "counter",
-  initialState: 0,
-  // "combined reducers"
-  reducers: {
-    //
-  }
-});
-
-// example slice 2
-const itemsSlice = createSlice({
-  name: "item",
-  initialState: "chocolate croissant",
-  reducers: {
-    //
-  }
-});
-
+import { configureStore } from "@reduxjs/toolkit";
+import { itemsReducer } from "./slices/itemsSlice";
+import { counterReducer } from "./slices/counterSlice";
 
 
 // ---------- Create the Redux Store ----------
 const store = configureStore({
   // ----- THE APP'S ENTIRE STATE (the state object) ----- 
   reducer: {
-    counter: counterSlice.reducer,
-    item: itemsSlice.reducer,
+    counter: counterReducer,
+    item: itemsReducer,
   }
 });
 
@@ -39,8 +19,6 @@ export { store };
 // These can be found on the slice's ".actions" property:
 // export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
-// console.log(counterSlice.reducer);
-
 
 // TODOS:
-// 1. better organize slices (improve file and folder structure)
+// 1.  Export any action creators
