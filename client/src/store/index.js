@@ -5,20 +5,19 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 // example slice
 const counterSlice = createSlice({
   name: "counter",
-  initialState: {
-    value: 0
-  },
+  initialState: 0,
   // "combined reducers"
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    }
+    //
+  }
+});
+
+// example slice 2
+const itemsSlice = createSlice({
+  name: "item",
+  initialState: "chocolate croissant",
+  reducers: {
+    //
   }
 });
 
@@ -28,7 +27,8 @@ const counterSlice = createSlice({
 const store = configureStore({
   // the state object 
   reducer: {
-    counter: counterSlice.reducer
+    counter: counterSlice.reducer,
+    item: itemsSlice.reducer,
   }
 });
 
@@ -37,6 +37,6 @@ export { store };
 
 // "Action creators" are created for each "type" in the "combined reducers".
 // These can be found on the slice's ".actions" property:
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+// export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
 // console.log(counterSlice.reducer);
