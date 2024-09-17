@@ -23,16 +23,16 @@ const itemsSlice = createSlice({
 
 
 
-// create the Redux Store
+// ---------- Create the Redux Store ----------
 const store = configureStore({
-  // the state object 
+  // ----- THE APP'S ENTIRE STATE (the state object) ----- 
   reducer: {
     counter: counterSlice.reducer,
     item: itemsSlice.reducer,
   }
 });
 
-// export the Redux Store
+// Export the Redux Store for use in the entire app
 export { store };
 
 // "Action creators" are created for each "type" in the "combined reducers".
@@ -40,3 +40,7 @@ export { store };
 // export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
 // console.log(counterSlice.reducer);
+
+
+// TODOS:
+// 1. better organize slices (improve file and folder structure)

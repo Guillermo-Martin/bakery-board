@@ -4,13 +4,16 @@ import LoginForm from "./../components/LoginForm";
 import { useSelector } from "react-redux";
 
 function LoginPage() {
-  // get info from redux store
+  // ---------- EXAMPLE:  get info from redux store ----------
+  
   const item = useSelector((state) => {
     return (state.item + state.counter);
   });
 
   // console.log the item in the redux store
   console.log("line 12", item);
+
+  // ---------------------------------------------------------
 
 
   return (
